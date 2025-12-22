@@ -1,0 +1,130 @@
+/* 1. Global Reset & Background */
+body {
+  margin: 0;
+  padding: 0;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+/* 2. Main Wrapper */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* 3. Search Bar Fixes */
+.search-box {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  z-index: 10; /* Ensures it stays clickable */
+}
+
+.search-box input {
+  flex: 1;
+  padding: 15px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.search-box button {
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: none;
+  background-color: #ff8c00;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.search-box button:active {
+  transform: scale(0.95);
+}
+
+/* 4. Weather Card Styling */
+.weather-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  padding: 30px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.temp {
+  font-size: 5rem;
+  margin: 0;
+  font-weight: 800;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.detail-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.loader {
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+.forecast-container {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.forecast-container h3 {
+  color: white;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.forecast-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.forecast-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  flex: 1; /* Makes all boxes equal width */
+  color: white;
+}
+
+.day-name {
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.forecast-temp {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 700;
+}
