@@ -12,7 +12,8 @@ const App = () => {
     if (!city.trim()) return;
 
     setLoading(true);
-    const apiKey = "82738893fb27b5c6a7fd39d9d6510612";
+    const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+  
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
